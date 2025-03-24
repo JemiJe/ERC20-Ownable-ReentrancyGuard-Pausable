@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean:compile": "npx hardhat clean && npx hardhat compile",
+    "test": "npx hardhat test --network hardhat"
   },
   "keywords": [],
   "author": "",
@@ -12,7 +13,10 @@
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
     "@openzeppelin/contracts": "^5.2.0",
+    "@typechain/ethers-v6": "^0.5.1",
+    "@typechain/hardhat": "^9.1.0",
     "dotenv": "^16.4.7",
-    "hardhat": "^2.22.19"
+    "hardhat": "^2.22.19",
+    "typechain": "^8.3.2"
   }
 }
