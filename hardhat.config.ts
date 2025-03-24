@@ -4,19 +4,19 @@ import * as dotenv from "dotenv";
 
 dotenv.config();
 
-let accounts = [
-  {
-    privateKey: `0x${process.env.PRIVATE_KEY}`,
-    balance: `50000${"0".repeat(18)}`, 
-  },
-];
+// let accounts = [
+//   {
+//     privateKey: `0x${process.env.PRIVATE_KEY}`,
+//     balance: `50000${"0".repeat(18)}`, 
+//   },
+// ];
 
 const config: HardhatUserConfig = {
   solidity: "0.8.28",
   defaultNetwork: "hardhat",
   networks: {
     hardhat: {
-      accounts,
+      // accounts,
       allowUnlimitedContractSize: true,
       chainId: 1337,
     },

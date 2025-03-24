@@ -34,14 +34,21 @@ describe("SkillTestToken", function () {
     await token.pause();
     await expect(
       token.transfer(addr1.address, ethers.parseEther("100"))
-    ).to.be.revertedWith("Pausable: paused");
+    ).to.be.revertedWithCustomError(token, "EnforcedPause");
   });
 
   it("Should prevent blacklisted address from sending", async function () {
     await token.blacklistAddress(addr1.address);
-    await token.transfer(addr1.address, ethers.parseEther("100"));
+  
     await expect(
-      token.connect(addr1).transfer(addr2.address, ethers.parseEther("50"))
-    ).to.be.revertedWith("Sender is blacklisted");
+      token.transfer(addr1.address, ethers.parseEther("100"))
+    ).to.be.revertedWith("recipient is blacklisted");
+  
+    await token.transfer(addr2.address, ethers.parseEther("100"));
+  
+    await token.blacklistAddress(addr2.address);
+    await expect(
+      token.connect(addr2).transfer(addr1.address, ethers.parseEther("50"))
+    ).to.be.revertedWith("sender is blacklisted");
   });
 });
