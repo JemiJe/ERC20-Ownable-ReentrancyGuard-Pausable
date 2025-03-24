@@ -14,9 +14,16 @@ async function main() {
   const SkillTestToken = await ethers.getContractFactory("SkillTestToken");
   const token = await SkillTestToken.deploy(feeWallet);
 
+  console.log("Deploying SkillTestToken...");
+
   await token.waitForDeployment();
   const tokenAddress = await token.getAddress();
   console.log("SkillTestToken deployed to:", tokenAddress);
+
+  console.log(`
+    run this in terminal to verify the contract on etherscan:
+    npx hardhat verify --network sepolia ${tokenAddress} "${feeWallet}"
+  `);
 }
 
 main()

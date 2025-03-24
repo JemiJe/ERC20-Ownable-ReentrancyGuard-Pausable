@@ -4,7 +4,9 @@
   "main": "index.js",
   "scripts": {
     "clean:compile": "npx hardhat clean && npx hardhat compile",
-    "test": "npx hardhat test --network hardhat"
+    "test": "npx hardhat test --network hardhat",
+    "deploy:sepolia": "npx hardhat run scripts/deploy.ts --network sepolia --verbose",
+    "deploy:local": "npx hardhat run scripts/deploy.ts --network hardhat"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +14,7 @@
   "description": "",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@nomiclabs/hardhat-etherscan": "^3.1.8",
     "@openzeppelin/contracts": "^5.2.0",
     "@typechain/ethers-v6": "^0.5.1",
     "@typechain/hardhat": "^9.1.0",
