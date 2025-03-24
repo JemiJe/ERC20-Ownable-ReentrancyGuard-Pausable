@@ -1,13 +1,17 @@
-# Sample Hardhat Project
+# how to install and set up
+node version is `22.13.1`
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+## starting
+1. `npm i`
+2. copy `.env.example` and rename to `.env`, and add your keys (infura key is optional)
+3. run `clean:compile`
 
-Try running some of the following tasks:
+run `test` for tests (optionally)
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.ts
-```
+## deploying
+1. local
+   - `npx hardhat node` to run local node
+   - `npm run deploy:local` to deploy local
+2. sepolia
+   - `npm run deploy:sepolia`
+
