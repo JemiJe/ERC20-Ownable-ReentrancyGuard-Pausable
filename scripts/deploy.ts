@@ -18,12 +18,15 @@ async function main() {
 
   await token.waitForDeployment();
   const tokenAddress = await token.getAddress();
+  
+  console.log("-".repeat(30));
   console.log("SkillTestToken deployed to:", tokenAddress);
 
   console.log(`
     run this in terminal to verify the contract on etherscan:
     npx hardhat verify --network sepolia ${tokenAddress} "${feeWallet}"
   `);
+  console.log("-".repeat(30));
 }
 
 main()
