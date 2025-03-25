@@ -42,10 +42,10 @@ task("interact", "Interacts with the SkillTestToken contract")
       default:
         console.log("Invalid command. Available commands:");
         console.log("  npx hardhat interact --command total-supply --network sepolia");
-        console.log("  npx hardhat interact --command balance --args [address] --network sepolia");
-        console.log("  npx hardhat interact --command transfer --args [recipientAddress] [amount] --network sepolia");
-        console.log("  npx hardhat interact --command blacklist --args [address] [true|false] --network sepolia");
-        console.log("  npx hardhat interact --command pause --args [true|false] --network sepolia");
+        console.log("  npx hardhat interact --command balance [address] --network sepolia");
+        console.log("  npx hardhat interact --command transfer [recipientAddress] [amount] --network sepolia");
+        console.log("  npx hardhat interact --command blacklist [address] [true|false] --network sepolia");
+        console.log("  npx hardhat interact --command pause [true|false] --network sepolia");
     }
   });
 

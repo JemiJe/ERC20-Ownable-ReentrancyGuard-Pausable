@@ -1,5 +1,5 @@
 
-# SkillTest Token (STT)
+# SST Token
 An ERC-20 token with advanced security and management features, designed for seamless transactions with built-in governance.
 
 ## ✨ Features
@@ -14,9 +14,13 @@ An ERC-20 token with advanced security and management features, designed for sea
   - Owner can **mint** new tokens.  
   - Anyone can **burn** their own tokens to reduce supply.
 
-## how to install and run
+## 🔗 Deployment
+- **Network:** Sepolia (Testnet)  
+- **Token Symbol:** STT  
+- **Contract Address:** [`0xDc6850463AdC192D34505c1d1261ab6BBFa311eb`](https://sepolia.etherscan.io/address/0xDc6850463AdC192D34505c1d1261ab6BBFa311eb)
+
+## node
 - node version is `22.13.1`
-- deployed contract address: https://sepolia.etherscan.io/address/0xDc6850463AdC192D34505c1d1261ab6BBFa311eb
 
 ## prepare
 1. `npm i`
